@@ -21,15 +21,35 @@ const antiDiagonals2 = matrix => {
     }
     return diagonalMaTrix;
 }
+const rotateMatrix = matrix => {
+    const length = matrix.length;
+    let rotateMatrix = [];
+    for (let i = 0; i < length; i++) {
+        for (let j = 0; j < length; j++) {
+            if (!rotateMatrix[j]) rotateMatrix[j] = [];
+            rotateMatrix[j][length - i - 1] = matrix[i][j];
+        }
+    }
+    return rotateMatrix;
+}
 describe('Test Daily 6', () => {
-    it('should return', done => {
-        const rs = antiDiagonals([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);
-        expect(rs).toEqual([[1], [2, 4], [3, 5, 7], [6, 8], [9]]);
-        done();
+    describe('Test AntiDiagonals', () => {
+        it('should return', done => {
+            const rs = antiDiagonals([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);
+            expect(rs).toEqual([[1], [2, 4], [3, 5, 7], [6, 8], [9]]);
+            done();
+        });
+        it('should return 2', done => {
+            const rs = antiDiagonals2([[1, 2], [3, 4]]);
+            expect(rs).toEqual([[1], [2, 3], [4]]);
+            done();
+        });
     });
-    it('should return 2', done => {
-        const rs = antiDiagonals2([[1, 2], [3, 4]]);
-        expect(rs).toEqual([[1], [2, 3], [4]]);
-        done();
-    });
+    describe('Test Rotate Matrix', () => {
+        it('should return', done => {
+            const rs = rotateMatrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);
+            expect(rs).toEqual([[7, 4, 1], [8, 5, 2], [9, 6, 3]]);
+            done();
+        })
+    })
 })
