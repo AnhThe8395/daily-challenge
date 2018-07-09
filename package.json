@@ -1,0 +1,15 @@
+{
+  "name": "dailychallenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AnhThe8395/daily-challenge.git",
+  "author": "AnhThe <nguyentheanh839@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "jest": "jest"
+  },
+  "devDependencies": {
+    "babel-jest": "^23.2.0",
+    "jest": "^23.3.0"
+  }
+}

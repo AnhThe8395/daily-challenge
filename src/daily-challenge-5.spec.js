@@ -15,5 +15,15 @@ const booking = (arrivals, departures, k) => {
     if (k <= 0) return false;
     return true;
 }
-console.log(booking([1, 2, 3, 4], [1, 2, 9, 14], 1))
-console.log(booking([1, 2, 3, 4], [10, 2, 6, 14], 4))
+describe('Test Daily 6', () => {
+    it('should return 1', done => {
+        const rs = booking([1, 2, 3, 4], [10, 2, 6, 14], 4);
+        expect(rs).toEqual(true);
+        done();
+    });
+    it('should return 2', done => {
+        const rs = booking([1, 3, 5], [2, 6, 8], 1);
+        expect(rs).toEqual(false);
+        done();
+    })
+})
