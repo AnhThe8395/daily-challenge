@@ -32,6 +32,22 @@ const rotateMatrix = matrix => {
     }
     return rotateMatrix;
 }
+
+const rotateMatrix2 = matrix => {
+    const length = matrix.length;
+    for (let i = 0; i < length / 2; i++) {
+        for (let j = i; j < length - 1 - i; j++) {
+            let temp = matrix[j][length - 1 - i];
+            matrix[j][length - 1 - i] = matrix[i][j];
+            let temp2 = matrix[length - 1 - i][length - 1 - j];
+            matrix[length - 1 - i][length - 1 - j] = temp;
+            let temp3 = matrix[length - 1 - j][i];
+            matrix[length - 1 - j][i] = temp2;
+            matrix[i][j] = temp3;
+        }
+    }
+    return matrix;
+}
 describe('Test Daily 6', () => {
     describe('Test AntiDiagonals', () => {
         it('should return', done => {
@@ -48,6 +64,11 @@ describe('Test Daily 6', () => {
     describe('Test Rotate Matrix', () => {
         it('should return', done => {
             const rs = rotateMatrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);
+            expect(rs).toEqual([[7, 4, 1], [8, 5, 2], [9, 6, 3]]);
+            done();
+        });
+        it('should return2 ', done => {
+            const rs = rotateMatrix2([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);
             expect(rs).toEqual([[7, 4, 1], [8, 5, 2], [9, 6, 3]]);
             done();
         })
