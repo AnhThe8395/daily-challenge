@@ -6,6 +6,7 @@
   "author": "AnhThe <nguyentheanh839@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "babel-node": "babel-node",
     "jest": "jest"
   },
   "devDependencies": {

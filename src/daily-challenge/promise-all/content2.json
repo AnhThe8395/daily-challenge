@@ -1,0 +1,10 @@
+[
+    {
+        "type": "dev",
+        "value": "Value1"
+    },
+    {
+        "type": "inter",
+        "value": "Inter"
+    }
+]
