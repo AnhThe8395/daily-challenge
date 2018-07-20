@@ -1,18 +1,21 @@
-import { powerOfTwoIntegers } from './power-of-two-integers';
+import {
+    powerOfTwoIntegers,
+    powerOfTwoIntegers2
+} from './power-of-two-integers';
 
 describe('Trailing Zeros in Factorial', () => {
     it('should return 1', done => {
-        const rs = powerOfTwoIntegers(4);
+        const rs = powerOfTwoIntegers2(4);
         expect(rs).toEqual(true);
         done();
     })
     it('should return 2', done => {
-        const rs = powerOfTwoIntegers(8);
+        const rs = powerOfTwoIntegers(2 ** 3 * 3 ** 6);
         expect(rs).toEqual(true);
         done();
     })
     it('should return 3', done => {
-        const rs = powerOfTwoIntegers(11);
+        const rs = powerOfTwoIntegers2(11);
         expect(rs).toEqual(false);
         done();
     })
