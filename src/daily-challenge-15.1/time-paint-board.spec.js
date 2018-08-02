@@ -1,7 +1,6 @@
 import {
     calculatedTimeMin
 } from './time-paint-board';
-import { isIterable } from 'core-js';
 
 describe('Time Paint Board', () => {
     it('should return 1', done => {
