@@ -26,7 +26,7 @@ const binarySearch = (start, end, books, condition) => {
 const calculatedBookMin = (students, books) => {
     const start = Math.max(...books);
     const end = books.reduce((a, b) => a + b);
-    const minBook = binarySearch(start, end, books,   );
+    const minBook = binarySearch(start, end, books, item => item > students);
     return minBook;
 }
 

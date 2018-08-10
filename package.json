@@ -10,10 +10,12 @@
     "jest": "jest"
   },
   "devDependencies": {
+    "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
     "babel-jest": "^23.2.0",
     "babel-preset-env": "^1.7.0",
     "jest": "^23.3.0",
+    "mock": "^0.1.1",
     "nodemon": "^1.18.1"
   }
 }
