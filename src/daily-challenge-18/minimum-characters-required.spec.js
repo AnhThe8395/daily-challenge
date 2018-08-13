@@ -2,7 +2,7 @@ import { minimumCharactersRequired }
     from './minimum-characters-required';
 
 describe('Minimum-Characters-Required', () => {
-    describe('should return', () => {
+    describe('Test case success', () => {
         it('should return 1', () => {
             const rs = minimumCharactersRequired('ABC');
             expect(2).toEqual(rs);

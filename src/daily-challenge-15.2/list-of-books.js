@@ -29,7 +29,6 @@ const calculatedBookMin = (students, books) => {
     const minBook = binarySearch(start, end, books, item => item > students);
     return minBook;
 }
-
 export {
     calculatedBookMin
 }
