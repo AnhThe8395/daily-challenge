@@ -12,6 +12,10 @@ describe('Test Function minimunXorValue', () => {
             const rs = minimunXorValue(0, 4, 7, 9);
             expect(rs).toEqual([4, 7]);
         });
+        it('arrayInput: [0,4,7,9,10]', () => {
+            const rs = minimunXorValue(0,4,7,9,10);
+            expect(rs).toEqual([4, 7]);
+        });
     });
     describe('Test Case : InputInvalidate', () => {
         it('Array is InputInvalidate', () => {
